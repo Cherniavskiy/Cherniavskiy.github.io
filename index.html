@@ -24,7 +24,15 @@
         </ol>
 </div>
 <div class="wrapper">
-    <div class="main"></div>
+    <div class="main">
+        <h2>Hello all,</h2>
+        <p>I just joined steemit and I'm looking forward to bringing my work here.
+        Some things about myself:
+        I paint/draw or a version of it since I was 5 years old but in the last 6 months I'm completely obsessed with portraits, human form and expression.
+        Most of the time I work in ink with a nib, graphite pencil or watercolors. I do experiment with other techniques but nowadays days these are my favorites.
+        I wanted in my first post to contribute with an original work for steemit so here it is:
+        </p>
+    </div>
     <div class="content">
         <div class="grid">
             <div class="grid__item" data-size="1280x961">
@@ -90,7 +98,7 @@
         </div>
         <div class="social">Social
             <div class="socialBlock">
-                <p>Call/Viber <a href="tel:+375296741455" style="color: black">+375(29)674-14-55 Velcom</a></p>
+                <p>Call / Viber: <a href="tel:+375296741455" style="color: black">+375(29)674 14 55 Velcom</a>
             </div>
         </div>
     </div></div>
@@ -103,12 +111,12 @@
 </div>
 <footer>
     <div class="footer">
-        <h4 class="_14">Follow us on</h4>
-        <ul class="social-icons">
-            <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
-            <li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://vk.com/id148181302" class="social-icon"> <i class="fa fa-vk"></i></a></li>
-        </ul>
+        <ol class="menuList">
+            <li id="main2">main</li>
+            <li id="gallery2">gallery</li>
+            <li id="contact2">contact</li>
+            <li id="media2">media</li>
+        </ol>
     </div>
 </footer>
 <script src="js/imagesloaded.pkgd.min.js"></script>
@@ -200,6 +208,31 @@
 
         });
         $('#main').on('click', function() {
+            $(".main").fadeIn("slow",function() {});
+            $(".contact").fadeOut("slow",function() {});
+            $(".grid").fadeOut("slow",function() {});
+        });
+
+    });
+
+    //footer
+    $(function(){
+        $('#gallery2').on('click', function() {
+            $(".contact").fadeOut("slow",function() {});
+            $(".grid").fadeIn("slow",function() {
+                grid._init();
+            });
+            $(".main").fadeOut("slow",function() {});
+        });
+        $('#contact2').on('click', function() {
+            $(".grid").fadeOut("slow",function() {});
+            $(".main").fadeOut("slow",function() {});
+            $(".contact").fadeIn("slow",function() {
+                $(".contact").css("display","flex")
+            });
+
+        });
+        $('#main2').on('click', function() {
             $(".main").fadeIn("slow",function() {});
             $(".contact").fadeOut("slow",function() {});
             $(".grid").fadeOut("slow",function() {});

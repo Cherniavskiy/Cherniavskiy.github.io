@@ -22,7 +22,8 @@ body:before {
   background-position: top;
 }
 .header {
-  padding-bottom: 3vw;
+  width: 80%;
+  margin: 0 auto;
 }
 .nameList {
   margin: 0 auto;
@@ -57,7 +58,7 @@ body:before {
 .grid {
   display: none;
 }
-.menuList {
+.header > .menuList {
   font-family: Matter;
   font-size: 7vw;
   margin: 0 auto;
@@ -73,12 +74,12 @@ body:before {
   justify-content: space-around;
   border-bottom: solid 1px #06060636;
 }
-.menuList > li {
+.header > .menuList > li {
   -webkit-transition: 0.1s ;
   -o-transition: 0.1s ;
   transition: 0.1s ;
 }
-.menuList > li:hover {
+.header > .menuList > li:hover {
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
@@ -89,13 +90,18 @@ body:before {
   height: 37px;
 }
 .wrapper {
-  margin: 0 auto;
+  margin: 2vw auto;
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .main {
-  height: 200px;
-  background-color: #1f1d1d;
-  opacity: 0.5;
+  font-size: 2vw;
+  color: white;
+  background-color: #000000;
+  opacity: 0.6;
+  padding: 5px;
 }
 .contact {
   -webkit-box-orient: horizontal;
@@ -123,8 +129,8 @@ form {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background-color: #ffffffc7;
-  border-radius: 10px;
+  background-color: #00000000;
+  border-radius: 4px;
   -webkit-box-shadow: 0px 0px 1px 1px #2a2736;
   box-shadow: 0px 0px 1px 1px #2a2736;
 }
@@ -181,8 +187,8 @@ form button {
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 1px 1px #2a2736;
   box-shadow: 0px 0px 1px 1px #2a2736;
-  font-size: 2vw;
-  font-family: monospace;
+  font-size: 12vh;
+  font-family: matter;
 }
 form:hover,
 .socialBlock:hover {
@@ -194,15 +200,17 @@ form:hover,
     font-size: 20.5vw;
     border-bottom: 1px solid gray;
   }
-  .menuList {
+  .header > .menuList {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
     -ms-flex-flow: wrap;
     flex-flow: wrap;
-    width: 80%;
     font-size: 17vw;
+  }
+  .main {
+    font-size: 5vw;
   }
   .contact {
     -webkit-box-orient: vertical;
@@ -217,8 +225,36 @@ form:hover,
 }
 .footer {
   border-top: 1px solid gray;
-  height: 30px;
-  margin-top: 3vw;
+  width: 80%;
+  margin: 0 auto;
+}
+.footer > .menuList {
+  font-family: monospace;
+  width: 20%;
+  font-size: 1.5vw;
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  color: #080808;
+  /* text-shadow: 1px 1px 0px #00000091; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-flow: column;
+  -ms-flex-pack: distribute;
+  /* border-bottom: solid 1px #06060636; */
+}
+.footer > .menuList > li {
+  -webkit-transition: 0.1s ;
+  -o-transition: 0.1s ;
+  transition: 0.1s ;
+}
+.footer > .menuList > li:hover {
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  text-shadow: 2px 1px 0 #00ffea, 2px -2px 0 #ff001f;
+  cursor: pointer;
 }
 .grid {
   position: relative;
