@@ -24,6 +24,7 @@
         </ol>
 </div>
 <div class="wrapper">
+    <div class="main"></div>
     <div class="content">
         <div class="grid">
             <div class="grid__item" data-size="1280x961">
@@ -188,9 +189,16 @@
             $(".grid").fadeIn("slow",function() {
                 grid._init();
             });
+            $(".main").fadeOut("slow",function() {});
         });
         $('#contact').on('click', function() {
             $(".contact").fadeIn("slow",function() {});
+            $(".grid").fadeOut("slow",function() {});
+            $(".main").fadeOut("slow",function() {});
+        });
+        $('#main').on('click', function() {
+            $(".main").fadeIn("slow",function() {});
+            $(".contact").fadeOut("slow",function() {});
             $(".grid").fadeOut("slow",function() {});
         });
 
