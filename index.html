@@ -192,7 +192,9 @@
             $(".main").fadeOut("slow",function() {});
         });
         $('#contact').on('click', function() {
-            $(".contact").fadeIn("slow",function() {});
+            $(".contact").fadeIn("slow",function() {
+                $(".contact").css("display","flex")
+            });
             $(".grid").fadeOut("slow",function() {});
             $(".main").fadeOut("slow",function() {});
         });
