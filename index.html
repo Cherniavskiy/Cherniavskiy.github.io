@@ -131,8 +131,11 @@
 <script>
     $(document).ready(function(){
         $('.least-gallery').least({
-
+            'scrollToGallery': false
         });
+        $('.least-gallery a').click(function (event) {
+            event.preventDefault()
+        })
     });
     $(function(){
         $('#gallery').on('click', function() {
