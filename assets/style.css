@@ -10,8 +10,11 @@ body {
 }
 body:before {
   content: "";
+  width: 100vw;
+  overflow-x: hidden;
+  background: url(media/tree-branches.svg) no-repeat;
   background-size: cover;
-  opacity: 0.3;
+  opacity: 0.04;
   top: 0;
   left: 0;
   bottom: 0;
@@ -95,8 +98,8 @@ body:before {
   height: 100%;
 }
 .main {
-  font-size: 2vw;
-  color: white;
+  font-size: 1.5em;
+  color: #fff2ae;
   background-color: #000000;
   opacity: 0.6;
   padding: 5px;
@@ -117,9 +120,10 @@ body:before {
 .social,
 .feedback {
   text-align: center;
-  width: 45%;
+  width: 100%;
+  margin: 30px auto;
   font-family: Matter;
-  font-size: 5vw;
+  font-size: 3em;
 }
 form {
   display: -webkit-box;
@@ -127,22 +131,42 @@ form {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  padding: 5px;
+  border-radius: 18px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background-color: #00000000;
-  border-radius: 4px;
-  -webkit-box-shadow: 0px 0px 1px 1px #2a2736;
-  box-shadow: 0px 0px 1px 1px #2a2736;
+  background-color: #b5b4b43b;
+  /* border-radius: 4px; */
+  /* -webkit-box-shadow: 0px 0px 1px 1px #2a2736; */
+  /* box-shadow: 0px 0px 1px 1px #2a2736; */
+  /* Firefox 19+ */
+  /* Firefox 18- */
+  /* Firefox 19+ */
+  /* Firefox 18- */
 }
 form input {
   background: transparent;
-  height: 20px;
+  height: 3vw;
   text-align: center;
   border: none;
+  /* color: black; */
+  font-size: .3em;
   padding: 5px;
-  border-bottom: solid 1px cornflowerblue;
+  border-bottom: solid 1px black;
+}
+form input::-webkit-input-placeholder {
+  color: #000000;
+}
+form input::-moz-placeholder {
+  color: #000000;
+}
+form input:-moz-placeholder {
+  color: #000000;
+}
+form input:-ms-input-placeholder {
+  color: #000000;
 }
 form input:-webkit-autofill,
 form input:-webkit-autofill:hover,
@@ -161,11 +185,25 @@ form select:-webkit-autofill:focus {
 }
 form textarea {
   background: transparent;
-  height: 166px;
+  height: 29vh;
+  margin: 3px;
   font-family: monospace;
   border: none;
   resize: none;
-  border-bottom: solid 1px cornflowerblue;
+  font-size: .4em;
+  border-bottom: solid 1px black;
+}
+form textarea::-webkit-input-placeholder {
+  color: #000000;
+}
+form textarea::-moz-placeholder {
+  color: #000000;
+}
+form textarea:-moz-placeholder {
+  color: #000000;
+}
+form textarea:-ms-input-placeholder {
+  color: #000000;
 }
 form button {
   background: transparent;
@@ -173,9 +211,11 @@ form button {
   /* color: white; */
   font-weight: bold;
   height: 25px;
+  cursor: pointer;
 }
 .socialBlock {
-  height: 227px;
+  padding: 5px;
+  /* border-radius: 18px; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -185,12 +225,14 @@ form button {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background: #ffffffc7;
-  border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 1px 1px #2a2736;
-  box-shadow: 0px 0px 1px 1px #2a2736;
   font-size: 8vh;
   font-family: matter;
+  background-color: #000000;
+  opacity: 0.6;
+  color: #fff2ae;
+}
+.underline {
+  text-decoration: none;
 }
 form:hover,
 .socialBlock:hover {
@@ -219,10 +261,6 @@ form:hover,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-  }
-  .social,
-  .feedback {
-    width: 100%;
   }
 }
 .footer {
@@ -309,7 +347,8 @@ html {
   transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
 }
 .contact,
-.grid {
+.grid,
+.main {
   transition: transform 0.4s cubic-bezier(0.5, 0, 0.3, 1);
 }
 .visible {
@@ -342,16 +381,20 @@ html {
   padding: 50px 0;
   margin-bottom: 30px;
   display: none;
-  z-index: 1;
+  color: white;
+  height: 100%;
+  text-align: center;
+  /* width: 100%; */
+  z-index: 3;
   width: 100%;
 }
 .least-preview img {
-  width: 100%;
-  /* position: relative; */
+  max-width: 71%;
+  /* max-width: 91%; */
   /* max-width: 100%; */
-  max-height: 100%;
-  max-width: 960px;
+  /* max-height: 97%; */
+  /* height: 38%; */
+  /* max-width: 940px; */
   margin: 0 auto;
   display: block;
-  /* z-index: 2; */
 }
