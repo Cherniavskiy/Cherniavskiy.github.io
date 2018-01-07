@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no, maximum-scale=1.0">
-    <!-- Responsive viewport for smartphone devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <!-- least.js 2 CSS file -->
     <link href="assets/js/least.min.css" rel="stylesheet" />
-    <title>Sadovskaya ART</title>
     <link rel="stylesheet" href="assets/style.css">
+    <title>Sadovskaya ART</title>
 </head>
 <body>
 <div class="least-preview"></div>
-<div class="header">
+<div class="header width80">
 <div class="name">
     <ol class="nameList">
         <li>A.</li><li>S</li><li>a</li><li>d</li><li>o</li><li>v</li><li>s</li><li>k</li><li>a</li><li>y</li><li>a</li>
     </ol>
 </div>
+    <div id="nav-icon" class="label-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
         <ol class="menuList">
             <li id="main"><a href="#main-page" class="link">main</a></li>
             <li id="gallery"><a href="#gallery-page" class="link">gallery</a></li>
@@ -26,52 +30,32 @@
         </ol>
 </div>
 <div class="wrapper">
-    <div class="main">
+    <div class="main boxshadow width80">
+        <img class="annphoto" src="assets/media/ann.jpg" alt="Photo" />
         <h2>Hello all,</h2>
-        <p>I just joined steemit and I'm looking forward to bringing my work here.
-        Some things about myself:
-        I paint/draw or a version of it since I was 5 years old but in the last 6 months I'm completely obsessed with portraits, human form and expression.
-        Most of the time I work in ink with a nib, graphite pencil or watercolors. I do experiment with other techniques but nowadays days these are my favorites.
-        I wanted in my first post to contribute with an original work for steemit so here it is:
-            I just joined steemit and I'm looking forward to bringing my work here.
-            Some things about myself:
-            I paint/draw or a version of it since I was 5 years old but in the last 6 months I'm completely obsessed with portraits, human form and expression.
-            Most of the time I work in ink with a nib, graphite pencil or watercolors. I do experiment with other techniques but nowadays days these are my favorites.
-            I wanted in my first post to contribute with an original work for steemit so here it is:
-            I just joined steemit and I'm looking forward to bringing my work here.
-            Some things about myself:
-            I paint/draw or a version of it since I was 5 years old but in the last 6 months I'm completely obsessed with portraits, human form and expression.
-            Most of the time I work in ink with a nib, graphite pencil or watercolors. I do experiment with other techniques but nowadays days these are my favorites.
-            I wanted in my first post to contribute with an original work for steemit so here it is:
-            I just joined steemit and I'm looking forward to bringing my work here.
-            Some things about myself:
-            I paint/draw or a version of it since I was 5 years old but in the last 6 months I'm completely obsessed with portraits, human form and expression.
-            Most of the time I work in ink with a nib, graphite pencil or watercolors. I do experiment with other techniques but nowadays days these are my favorites.
-            I wanted in my first post to contribute with an original work for steemit so here it is:
-            I just joined steemit and I'm looking forward to bringing my work here.
-            Some things about myself:
-            I paint/draw or a version of it since I was 5 years old but in the last 6 months I'm completely obsessed with portraits, human form and expression.
-            Most of the time I work in ink with a nib, graphite pencil or watercolors. I do experiment with other techniques but nowadays days these are my favorites.
-            I wanted in my first post to contribute with an original work for steemit so here it is:
+        <p>I am an artist Anna Sadovskaya. I live and work in Minsk. I cooperate with galleries producers of printed products: calendars, reproductions, postcards, etc., I take part in exhibitions.
+            Most of the works are in private collections, and several paintings in the embassies of the Republic of Belarus in Poland, Kazakhstan, Ukraine.
+            All the works presented here can be purchased.
+            Also, the site contains information about exhibitions, videos about creativity, interesting materials about painting.
+            Sincerely, Anna Sadovskaya.
         </p>
     </div>
-    <div class="contact hidden">
+    <div class="contact hidden width80">
         <div class="social">
-            <div class="socialBlock">
+            <div class="socialBlock boxshadow">
                 <p style="border-bottom: 2px solid #ffffffdb;">Call&nbsp;/&nbsp;Viber: <a  class="underline" href="tel:+375296741455" style="color: #fff2ae">+375(29) 674&nbsp;14&nbsp;55 Velcom</a>
                 <p>m@il&nbsp;to: <a  class="underline" href="mailto:annasadovskaya7@gmail.com" style="color: #fff2ae;">annasadovskaya7 @ gmail.com</a>
             </div>
         </div>
         <div class="feedback">Feedback
             <form method="POST" action="https://formspree.io/icherniavskiy@gmail.com">
-                <input type="email" name="email" placeholder="Your email">
-                <textarea name="message" placeholder="Your message"></textarea>
-                <button type="submit">Send</button>
+                <input class="boxshadow" type="email" name="email" placeholder="Your email">
+                <textarea class="boxshadow" name="message" placeholder="Your message"></textarea>
+                <button class="boxshadow" type="submit">Send</button>
             </form>
         </div>
     </div>
-    <div class="grid hidden">
-    <section id="least">
+    <div class="grid hidden"><section id="least">
 
     <!-- Least Gallery: Fullscreen Preview -->
     <!--<div class="least-preview"></div>-->
@@ -85,7 +69,7 @@
             </a>
         </li>
         <li>
-            <a href="assets/media/big/02.jpg" data-subtitle="View Picture" data-caption="Холст. Масло</a>" >
+            <a href="assets/media/big/02.jpg" data-subtitle="View Picture " data-caption="Холст. Масло</a>" >
                 <img src="assets/media/thumbnails/02.jpg" alt="Alt Image Text" />
             </a>
         </li>
@@ -110,12 +94,13 @@
             </a>
         </li>
     </ul>
-    </section>
+    </section></div>
+    <div class="media hidden width80">
+        <div class="video"><iframe width="560" height="315" id="video" src="" frameborder="0"
+                               gesture="media" allow="encrypted-media" allowfullscreen>
+        </iframe>
+        </div>
     </div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
 </div>
 <footer>
     <div class="footer">
@@ -124,8 +109,9 @@
             <li id="gallery2">gallery</li>
             <li id="contact2">contact</li>
             <li id="media2">media</li>
-            <li><div class="vk"><a href="https://vk.com/id148181302"></a></div></li>
+            <li><a href="https://vk.com/id148181302"><div class="vk"></div></a></li>
         </ol>
+        <div class="copyright"><p>&copy;2017 created by Pavel Cherniavskiy</p></div>
     </div>
 </footer>
 <script src="assets/js/jquery.min.js"></script>
@@ -140,22 +126,33 @@
         })
     });
     $(function(){
-        $('#gallery').on('click', function() {
+        $('#gallery, #gallery2').on('click', function() {
             show($(".grid"));
             hide($(".main"));
             hide($(".contact"));
+            hide($(".media"));
+            $("iframe#video")[0].src = "";
         });
-        $('#contact').on('click', function() {
+        $('#contact, #contact2').on('click', function() {
             show($(".contact"));
             hide($(".main"));
             hide($(".grid"));
-            /*$(".contact").css("display","flex");*/
-
+            hide($(".media"));
+            $("iframe#video")[0].src = "";
         });
-        $('#main').on('click', function() {
+        $('#main, #main2').on('click', function() {
             show($(".main"));
             hide($(".grid"));
             hide($(".contact"));
+            hide($(".media"));
+            $("iframe#video")[0].src = "";
+        });
+        $('#media, #media2').on('click', function() {
+            show($(".media"));
+            hide($(".main"));
+            hide($(".contact"));
+            hide($(".grid"));
+            $("iframe#video")[0].src = "https://www.youtube.com/embed/yQfDS8NuC2I";
         });
 
         function show(element) {
@@ -174,29 +171,12 @@
         }
 
     });
-
-    //footer
-    /*$(function(){
-        $('#gallery2').on('click', function() {
-            $(".contact").fadeOut("slow",function() {});
-            $(".grid").fadeIn("slow",function() {});
-            $(".main").fadeOut("slow",function() {});
+    $(document).ready(function(){
+        $('#nav-icon').click(function(){
+            $(this).toggleClass('open');
+            $(".menuList").toggleClass('open');
         });
-        $('#contact2').on('click', function() {
-            $(".grid").fadeOut("slow",function() {});
-            $(".main").fadeOut("slow",function() {});
-            $(".contact").fadeIn("slow",function() {
-                $(".contact").css("display","flex")
-            });
-
-        });
-        $('#main2').on('click', function() {
-            $(".main").fadeIn("slow",function() {});
-            $(".contact").fadeOut("slow",function() {});
-            $(".grid").fadeOut("slow",function() {});
-        });*/
-/*
-    });*/
+    });
 </script>
 </body>
 </html>
