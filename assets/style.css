@@ -90,11 +90,9 @@ body:before {
   position: relative;
   margin: 5px auto;
   -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
   transform: rotate(0deg);
   -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
   -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   cursor: pointer;
@@ -110,11 +108,9 @@ body:before {
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
   transform: rotate(0deg);
   -webkit-transition: 0.25s ease-in-out;
-  -moz-transition: 0.25s ease-in-out;
   -o-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
 }
@@ -135,14 +131,12 @@ body:before {
 }
 #nav-icon.open span:nth-child(2) {
   -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 #nav-icon.open span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 #nav-icon.open span:nth-child(4) {
@@ -229,6 +223,8 @@ form input {
   /* color: black; */
   font-size: .3em;
   font-weight: bold;
+  -webkit-transition: .01s;
+  -o-transition: .01s;
   transition: .01s;
 }
 form input::-webkit-input-placeholder {
@@ -257,6 +253,7 @@ form select:-webkit-autofill:focus {
   -webkit-transition: background-color 5000s ease-in-out 0s;
   -o-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
+  -webkit-box-shadow: 0 0 1px 1px black, 0 0 1px 1px #00000052, inset 0 0 1px 1px #3b3b3b;
   box-shadow: 0 0 1px 1px black, 0 0 1px 1px #00000052, inset 0 0 1px 1px #3b3b3b;
   color: white;
 }
@@ -272,14 +269,20 @@ form textarea {
   resize: none;
   font-size: .4em;
   margin-bottom: 2px;
+  -webkit-transition: .1s;
+  -o-transition: .1s;
   transition: .1s;
 }
 form input:hover,
 form button:hover {
+  -webkit-transition: .05s;
+  -o-transition: .05s;
   transition: .05s;
   opacity: 1;
 }
 form textarea:hover {
+  -webkit-transition: .05s;
+  -o-transition: .05s;
   transition: .05s;
   opacity: .8;
 }
@@ -304,6 +307,8 @@ form button {
   margin-top: 5px;
   /* color: white; */
   font-weight: bold;
+  -webkit-transition: .05s;
+  -o-transition: .05s;
   transition: .05s;
 }
 .socialBlock {
@@ -327,10 +332,15 @@ form button {
   text-decoration: none;
 }
 .video {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .boxshadow {
+  -webkit-box-shadow: 0 0 1px 1px black, 0 0 1px 1px #00000052, inset 0 0 1px 1px #3b3b3b;
   box-shadow: 0 0 1px 1px black, 0 0 1px 1px #00000052, inset 0 0 1px 1px #3b3b3b;
   border-radius: 1px;
 }
@@ -394,13 +404,21 @@ form button {
     display: block;
   }
   .header .menuList {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
     transition: .2s;
     font-size: 0;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
     transform: scaleY(0);
   }
   .header .menuList.open {
     font-size: 17vw;
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
     transform: scaleY(1);
+    -webkit-transition: .2s;
+    -o-transition: .2s;
     transition: .2s;
   }
   .header .menuList {
@@ -434,6 +452,7 @@ form button {
   }
   .footer .menuList li {
     padding: 6px;
+    -webkit-text-decoration-line: underline;
     text-decoration-line: underline;
   }
   .vk {
