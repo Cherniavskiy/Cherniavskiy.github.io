@@ -18,9 +18,6 @@ img {
   margin: 0 0 30px 0;
   position: relative;
   text-align: center;
-  /* @group Fullimage */
-  /* @end */
-  /* @group Smallimages */
 }
 #least .least-preview {
   background-color: whitesmoke;
@@ -56,7 +53,7 @@ img {
   position: relative;
   top: 20px;
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 18px;
   font-weight: 400;
 }
@@ -65,10 +62,11 @@ img {
 }
 #least .least-gallery {
   font-size: 0;
+  padding: 5px;
 }
 #least .least-gallery li {
   position: relative;
-  vertical-align: top;
+  vertical-align: middle;
   display: inline-block;
   margin: 0 10px 10px 0;
   /* @end */
@@ -77,9 +75,7 @@ img {
   position: relative;
   display: block;
   text-decoration: none;
-  width: 240px;
   /* Default width: 240px: to edit go to assets/options */
-  height: 150px;
   /* Default height: 150px: to edit go to assets/options */
   /* @group Outline */
   -webkit-transition-property: outline-color;
@@ -102,9 +98,7 @@ img {
   /* @end */
 }
 #least .least-gallery li a img {
-  width: 240px;
   /* Default width: 240px: to edit go to assets/options */
-  height: 150px;
   /* Default height: 150px: to edit go to assets/options */
 }
 #least .least-gallery li a.active {
@@ -121,14 +115,12 @@ img {
   overflow: hidden;
   margin: -20px 0 0 0;
   text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   color: white;
   text-shadow: 1px 1px 1px #666666;
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
-  font-size: 30px;
-  line-height: 30px;
-  font-weight: 800;
+  font-size: 15px;
+
+  font-weight: 600;
 }
 #least .least-gallery li a:hover {
   /* @group Outline */
@@ -140,48 +132,48 @@ img {
 }
 #least .least-gallery li a:hover:before {
   content: attr(data-subtitle);
-  /* Default text: "View Picture" - to edit go change the attr. "data-subtitle" */
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  padding-top: 7%;
+  vertical-align: middle;
+  /* vertical-align: sub; */
+  /* text-overflow: unset; */
   z-index: 2;
-  overflow: hidden;
+  /* overflow: hidden; */
   letter-spacing: 1px;
   color: white;
   text-shadow: 1px 1px 1px #666666;
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 15px;
-  line-height: 175px;
+  /* line-height: 5px; */
   font-weight: 200;
-  width: 240px;
-  /* Default width: 240px: to edit go to assets/options */
-  height: 150px;
-  /* Default height: 150px: to edit go to assets/options */
   background: black;
   background: rgba(0, 0, 0, 0.5);
 }
 #least .least-gallery li a:hover:after {
   content: attr(title);
-  /* Default text: your a "title"-tag */
   position: absolute;
-  top: 50%;
-  left: 20px;
-  right: 20px;
+  top: 76%;
+  left: 0;
+  bottom: 10%;
+  right: 0;
   z-index: 2;
   overflow: hidden;
   margin: -30px 0 0 0;
-  border-bottom: 2px solid;
+  border-bottom: 1px solid;
   border-color: white;
-  text-align: center;
-  text-transform: uppercase;
+  /* text-align: center; */
+  /* text-transform: uppercase; */
   text-shadow: 1px 1px 1px #666666;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
   color: white;
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 20px;
-  line-height: 30px;
+  /* width: 100%; */
+  /* line-height: 117px; */
   font-weight: 600;
 }
 

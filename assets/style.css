@@ -3,7 +3,7 @@
   src: url(fonts/Matter.ttf);
 }
 body {
-  background-color: darkgray;
+  background-color: #a9a9a93d;
   margin: 0 auto;
   position: relative;
   height: 100%;
@@ -14,7 +14,7 @@ body:before {
   overflow-x: hidden;
   background: url(media/tree-branches.svg) no-repeat;
   background-size: cover;
-  opacity: 0.07;
+  opacity: 0.06;
   top: 0;
   left: 0;
   bottom: 0;
@@ -58,6 +58,7 @@ body:before {
 }
 .header .menuList {
   font-family: Matter;
+  width: 100%;
   font-size: 7vw;
   margin: 0 auto;
   list-style-type: none;
@@ -84,19 +85,27 @@ body:before {
   text-shadow: 2px 1px 0 #00ffea, 2px -2px 0 #ff001f;
   cursor: pointer;
 }
+.nav {
+  display: flex;
+  flex-flow: row-reverse;
+}
 #nav-icon {
   width: 60px;
   height: 45px;
   position: relative;
-  margin: 5px auto;
+  margin: 40px auto;
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
   cursor: pointer;
   display: none;
+  left: -35%;
+}
+#nav-icon.open {
+  left: 11%;
 }
 #nav-icon span {
   display: block;
@@ -149,7 +158,7 @@ body:before {
   text-decoration: none;
 }
 .wrapper {
-  margin: 2vw auto;
+  margin: 7vw auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -157,7 +166,6 @@ body:before {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%;
 }
 .main {
   font-size: 2.5vw;
@@ -190,9 +198,11 @@ body:before {
 .feedback {
   text-align: center;
   width: 100%;
-  margin: 30px auto;
   font-family: Matter;
   font-size: 3em;
+}
+.social {
+  margin-bottom: 38px;
 }
 form {
   width: 100%;
@@ -400,17 +410,11 @@ form button {
   .header input {
     display: block;
   }
+  .nav {
+    border-bottom: 1px solid #06060636;
+  }
   #nav-icon {
     display: block;
-  }
-  .header .menuList {
-    -webkit-transition: .2s;
-    -o-transition: .2s;
-    transition: .2s;
-    font-size: 0;
-    -webkit-transform: scaleY(0);
-    -ms-transform: scaleY(0);
-    transform: scaleY(0);
   }
   .header .menuList.open {
     font-size: 17vw;
@@ -420,14 +424,22 @@ form button {
     -webkit-transition: .2s;
     -o-transition: .2s;
     transition: .2s;
+    margin-bottom: 10px;
   }
   .header .menuList {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    /*-ms-flex-flow: wrap;
-    flex-flow: wrap;*/
+    width: 60%;
+    font-size: 0;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    -webkit-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+    border-bottom: none;
   }
   .main {
     font-size: 5vw;
