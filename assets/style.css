@@ -93,7 +93,7 @@ body:before {
   width: 60px;
   height: 45px;
   position: relative;
-  margin: 40px auto;
+  margin: 11px auto;
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
@@ -419,8 +419,30 @@ form button {
   #nav-icon {
     display: block;
   }
+  #nav-icon.open:before {
+    content: " ";
+    transition: .3s;
+  }
+  div#nav-icon:before {
+    content: "MENU";
+    display: block;
+    position: absolute;
+    width: 40px;
+    /* transform: rotate(270deg); */
+    top: 12px;
+    right: 133px;
+    font-family: sans-serif;
+    font-size: 14px;
+    /* transform: scaleY(0.4); */
+    font-weight: bold;
+    transition: .3s;
+    /* position: fixed; */
+    /* background: white; */
+    z-index: 30;
+    color: #525252;
+  }
   .header .menuList.open {
-    font-size: 17vw;
+    font-size: 8vw;
     -webkit-transform: scaleY(1);
     -ms-transform: scaleY(1);
     transform: scaleY(1);
@@ -443,6 +465,10 @@ form button {
     -ms-transform: scaleY(0);
     transform: scaleY(0);
     border-bottom: none;
+    font-family: monospace;
+  }
+  .header .menuList.open li {
+    margin: 12px auto;
   }
   .main {
     font-size: 5vw;
