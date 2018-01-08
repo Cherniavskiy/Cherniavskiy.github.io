@@ -152,7 +152,7 @@ body:before {
   width: 0%;
   left: 50%;
 }
-.link {
+.linkmain, .linkcontact, .linkgallery, .linkmedia {
   color: black;
   text-decoration: none;
 }
@@ -217,7 +217,7 @@ form {
   input {
     background-color: #000000;
     opacity: 0.8;
-    color: #969696;
+    color: white;
     /* height: 3vw; */
     padding: 5px;
     margin-bottom: 7px;
@@ -250,7 +250,7 @@ form {
     transition: background-color 5000s ease-in-out 0s;
     -webkit-box-shadow: 0 0 1px 1px black, 0 0 1px 1px #00000052, inset 0 0 1px 1px #3b3b3b;
     box-shadow: 0 0 1px 1px black, 0 0 1px 1px #00000052, inset 0 0 1px 1px #3b3b3b;
-    color: white;
+    -webkit-text-fill-color: white;
   }
   textarea {
     background-color: #000000;
@@ -515,6 +515,7 @@ html {
 }
 .least-preview img {
   max-width: 71%;
+  max-height: 85%;
   margin: 0 auto;
   display: block;
   padding-bottom: 6px;
@@ -526,4 +527,7 @@ html {
 #least .least-gallery li a:hover {
   outline: 1px solid;
   outline-color: #666666;
+}
+.check {
+  text-shadow: 2px 1px 0 #00ffea, 2px -2px 0 #ff001f;
 }

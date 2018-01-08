@@ -24,10 +24,10 @@
         <span></span>
     </div>
         <ol class="menuList">
-            <li id="main"><a href="#main-page" class="link">main</a></li>
-            <li id="gallery"><a href="#gallery-page" class="link">gallery</a></li>
-            <li id="contact"><a href="#contact-page" class="link">contact</a></li>
-            <li id="media"><a href="#media-page" class="link">media</a></li>
+            <li id="main"><a href="#main-page" class="linkmain check">main</a></li>
+            <li id="gallery"><a href="#gallery-page" class="linkgallery">gallery</a></li>
+            <li id="contact"><a href="#contact-page" class="linkcontact">contact</a></li>
+            <li id="media"><a href="#media-page" class="linkmedia">media</a></li>
         </ol>
     </div>
 </div>
@@ -111,10 +111,10 @@
 <footer>
     <div class="footer">
         <ol class="menuList">
-            <li id="main2">main</li>
-            <li id="gallery2">gallery</li>
-            <li id="contact2">contact</li>
-            <li id="media2">media</li>
+            <li id="main2" class="linkmain">main</li>
+            <li id="gallery2" class="linkgallery">gallery</li>
+            <li id="contact2" class="linkcontact">contact</li>
+            <li id="media2" class="linkmedia">media</li>
             <li><a href="https://vk.com/id148181302"><div class="vk"></div></a></li>
         </ol>
         <div class="copyright"><p>&copy;2017 created by Pavel Cherniavskiy</p></div>
@@ -127,7 +127,7 @@
         $('.least-gallery').least({
             'scrollToGallery': false
         });
-        $('.least-gallery a').click(function (event) {
+        $('.least-gallery').click(function (event) {
             event.preventDefault()
         })
     });
@@ -138,6 +138,10 @@
             hide($(".contact"));
             hide($(".media"));
             $("iframe#video")[0].src = "";
+            active($('.linkgallery'));
+            unchecked($('.linkcontact'));
+            unchecked($('.linkmain'));
+            unchecked($('.linkmedia'));
         });
         $('#contact, #contact2').on('click', function() {
             show($(".contact"));
@@ -145,6 +149,10 @@
             hide($(".grid"));
             hide($(".media"));
             $("iframe#video")[0].src = "";
+            active($('.linkcontact'));
+            unchecked($('.linkmedia'));
+            unchecked($('.linkmain'));
+            unchecked($('.linkgallery'));
         });
         $('#main, #main2').on('click', function() {
             show($(".main"));
@@ -152,6 +160,10 @@
             hide($(".contact"));
             hide($(".media"));
             $("iframe#video")[0].src = "";
+            active($('.linkmain'));
+            unchecked($('.linkgallery'));
+            unchecked($('.linkcontact'));
+            unchecked($('.linkmedia'));
         });
         $('#media, #media2').on('click', function() {
             show($(".media"));
@@ -159,23 +171,24 @@
             hide($(".contact"));
             hide($(".grid"));
             $("iframe#video")[0].src = "https://www.youtube.com/embed/yQfDS8NuC2I";
+            active($('.linkmedia'));
+            unchecked($('.linkcontact'));
+            unchecked($('.linkgallery'));
+            unchecked($('.linkmain'));
         });
 
         function show(element) {
             element.removeClass("hidden");
-            /*element.removeClass("hideBlock");
-            element.addClass("showBlock");*/
-            //element.addClass("visible");
-
         }
-
         function hide(element) {
-            //element.removeClass("visible");
-//            element.removeClass("showBlock");
             element.addClass("hidden");
-            //element.addClass("hideBlock");
         }
-
+        function unchecked(element) {
+            element.removeClass("check");
+        }
+        function active(element) {
+            element.addClass("check");
+        }
     });
     $(document).ready(function(){
         $('#nav-icon').click(function(){
